@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Product Id="794317E3-5466-4e6d-9A96-A7071EC3889C" Name="NStub" Language="1033" Version="1.0.0.0" Manufacturer="Jeremy Jarrell">
+    <Package Id="93CA537C-3886-4506-8D58-19EB43141564" Description="A tool for automated unit test generation." 
+             Comments="(C) 2006, Jeremy Jarrell." InstallerVersion="200" Compressed="yes" />
+
+    <Media Id="1" Cabinet="NStub.cab" EmbedCab="yes" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLLOCATION" Name="NStub" LongName="NStub">
+
+          <Component Id="ProductComponent" Guid="794317E3-5466-4e6d-9A96-A7071EC3889C">
+            <!-- TODO: Insert your files, registry keys, and other resources here. -->
+          </Component>
+
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="ProductFeature" Title="Feature Title" Level="1">
+      <ComponentRef Id="ProductComponent" />
+    </Feature>
+  </Product>
+</Wix>

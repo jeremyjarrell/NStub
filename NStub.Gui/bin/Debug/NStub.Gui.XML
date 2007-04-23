@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NStub.Gui</name>
+    </assembly>
+    <members>
+        <member name="T:NStub.Gui.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NStub.Gui.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NStub.Gui.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:NStub.Gui.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:NStub.Gui.MainForm">
+            <summary>e
+            This is the main UI form for the NStub application.
+            </summary>
+        </member>
+        <member name="F:NStub.Gui.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NStub.Gui.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NStub.Gui.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NStub.Gui.MainForm.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MainForm"/> class.
+            </summary>
+        </member>
+        <member name="M:NStub.Gui.MainForm.btnBrowseInputAssembly_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the btnBrowseInputAssembly control.
+            Allows the user to select the assembly they wish to generate the test cases
+            for.  Calls the <see cref="!:NStub.Gui.LoadAssembly">LoadAssembly</see>method 
+            to query the assembly for its contained types.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the 
+            event data.</param>
+        </member>
+        <member name="M:NStub.Gui.MainForm.btnBrowseOutputDirectory_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the btnBrowseOutputDirectory control.
+            Allows the user to select the output directory for the generated sources
+            files.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the 
+            event data.</param>
+        </member>
+        <member name="M:NStub.Gui.MainForm.tvAssemblyGraph_BeforeSelect(System.Object,System.Windows.Forms.TreeViewCancelEventArgs)">
+            <summary>
+            Handles the BeforeSelect event of the tvAssemblyGraph control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.TreeViewCancelEventArgs"/> 
+            instance containing the event data.</param>
+        </member>
+        <member name="M:NStub.Gui.MainForm.btnGo_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the btnGo control.  Creates a list of the methods
+            for which the user wishes to generate test cases for and instantiates an
+            instance of NStub around these methods.  The sources are files are then
+            generated.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the 
+            event data.</param>
+        </member>
+        <member name="M:NStub.Gui.MainForm.tvAssemblyGraph_AfterCheck(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            Handles the AfterCheck event of the tvAssemblyGraph control.
+            Checks or unchecks all children of 
+            <see cref="P:System.Windows.Forms.TreeViewEventArgs.Node">e.Node</see>.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.TreeViewEventArgs"/> 
+            instance containing the event data.</param>
+        </member>
+        <member name="M:NStub.Gui.MainForm.CreateTreeNode(System.String,System.String)">
+            <summary>
+            Creates a <see cref="T:System.Windows.Forms.TreeNode">TreeNode</see> with the 
+            given text and image key.
+            </summary>
+            <param name="text">The text of the TreeNode.</param>
+            <param name="imageKey">The key corresponding to the TreeNode's image.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NStub.Gui.MainForm.LoadAssembly">
+            <summary>
+            Reflects through the currently selected assembly and reflects the type tree
+            in tvAssemblyGraph.
+            </summary>
+        </member>
+        <member name="M:NStub.Gui.MainForm.CheckChildren(System.Windows.Forms.TreeNode)">
+            <summary>
+            Applies the check state of the given 
+            <see cref="T:System.Windows.Forms.TreeNode">TreeNode</see> to all of its 
+            children.
+            </summary>
+            <param name="treeNode">The TreeNode which contains the check state to apply.</param>
+        </member>
+    </members>
+</doc>

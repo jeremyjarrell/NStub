@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NStub.CSharp</name>
+    </assembly>
+    <members>
+        <member name="T:NStub.CSharp.CSharpCodeGenerator">
+            <summary>
+            The CSharpCodeGenerator is responsible for the generation of the individual
+            class files which will make up the actual test project.  For information
+            regarding the generation of the project file, see 
+            <see cref="T:NStub.CSharp.CSharpProjectGenerator">CSharpProjectGenerator</see>.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpCodeGenerator.#ctor(System.CodeDom.CodeNamespace,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NStub.CSharp.CSharpCodeGenerator"/> class
+            based the given CodeNamespace which will output to the given directory.
+            </summary>
+            <param name="codeNamespace">The code namespace.</param>
+            <param name="outputDirectory">The output directory.</param>
+            <exception cref="T:System.ArgumentNullException">codeNamepsace or
+            outputDirectory is null.</exception>
+            <exception cref="T:System.ArgumentException">outputDirectory is an
+            empty string.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">outputDirectory
+            cannot be found.</exception>
+        </member>
+        <member name="M:NStub.CSharp.CSharpCodeGenerator.GenerateCode">
+            <summary>
+            This methods actually performs the code generation for the
+            file current <see cref="T:System.CodeDom.CodeNamespace">CodeNamespace</see>. 
+            All classes within the namespace will have exactly one file generated for them.  
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpCodeGenerator.CreateStubForCodeTypeMember(System.CodeDom.CodeTypeMember)">
+            <summary>
+            Creates the stub for code type member.  In this case we only append
+            the user's selected test name to the method.
+            </summary>
+            <param name="codeTypeMember">The code type member to be generated.</param>
+        </member>
+        <member name="M:NStub.CSharp.CSharpCodeGenerator.CreateStubForCodeMemberMethod(System.CodeDom.CodeMemberMethod)">
+            <summary>
+            Creates the stub for the code member method.  This method actually
+            implements the method body for the test method.
+            </summary>
+            <param name="codeMemberMethod">The code member method.</param>
+        </member>
+        <member name="M:NStub.CSharp.CSharpCodeGenerator.WriteClassFile(System.String,System.CodeDom.CodeNamespace)">
+            <summary>
+            Writes the class file.  This method actually creates the physical
+            class file and populates it accordingly.
+            </summary>
+            <param name="className">Name of the class file to be written.</param>
+            <param name="codeNamespace">The CodeNamespace which represents the
+            file to be written.</param>
+        </member>
+        <member name="P:NStub.CSharp.CSharpCodeGenerator.OutputDirectory">
+            <summary>
+            Gets or sets the directory the new sources files will be output to.
+            </summary>
+            <value>The directory the new source files will be output to.</value>
+        </member>
+        <member name="P:NStub.CSharp.CSharpCodeGenerator.CodeNamespace">
+            <summary>
+            Gets or sets the <see cref="T:System.CodeDom.CodeNamespace"/> object 
+            the generator is currently working from.
+            </summary>
+            <value>The <see cref="T:System.CodeDom.CodeNamespace"/> object the 
+            generator is currently working from.</value>
+        </member>
+        <member name="T:NStub.CSharp.CSharpProjectGenerator">
+            <summary>
+            The CSharpProjectGenerator class is responsible for writing the XML which
+            will create the project file.  This class ensures that all necessary
+            resources as well as all necessary references are properly included.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NStub.CSharp.CSharpProjectGenerator"/>
+            within the given projectName which will output to the given 
+            outputDirectory.
+            </summary>
+            <param name="projectName">The name of the project.</param>
+            <param name="outputDirectory">The directory where the project
+            will be output.</param>	
+            <exception cref="T:System.ArgumentNullException">Either projectName or
+            outputDirectory is null.</exception>
+            <exception cref="T:System.ArgumentException">Either projectName or
+            outputDirectory is empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">outputDirectory
+            cannot be found.</exception>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.GenerateProjectFile">
+            <summary>
+            Generates the project file.  This method is responsible for actually
+            generating the XML which will represent the project as well including
+            all necessary resources and references.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.AddDefaultTarget">
+            <summary>
+            Writes the default target to the project file.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.AddClassFiles">
+            <summary>
+            Adds an ItemGroup to the project file which includes the class files which will be
+            part of the project.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.AddReferencedAssemblies">
+            <summary>
+            Adds an ItemGroup to the project file which includes the list of assemblies
+            which will be referenced as part of the project.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.WritePropertyGroupElement">
+            <summary>
+            Writes an empty property group element to the project file.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.WritePropertyGroupElement(System.String,System.String)">
+            <summary>
+            Writes a property group element with the given configuration and
+            platform to the project file.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="platform">The platform.</param>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.WriteDefaultConfiguration">
+            <summary>
+            Writes a Configuration element to the project file specifying the default
+            configuration.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.WriteDebugConfiguration">
+            <summary>
+            Writes a Configuration element to the project file specifying the Debug
+            configuration.
+            </summary>
+        </member>
+        <member name="M:NStub.CSharp.CSharpProjectGenerator.WriteReleaseConfiguration">
+            <summary>
+            Writes a Configuration element to the project file specifying the Release
+            configuration.
+            </summary>
+        </member>
+        <member name="P:NStub.CSharp.CSharpProjectGenerator.ProjectName">
+            <summary>
+            Gets or sets the name of the project.
+            </summary>
+            <value>The name of the project.</value>
+        </member>
+        <member name="P:NStub.CSharp.CSharpProjectGenerator.OutputDirectory">
+            <summary>
+            Gets or sets the directory where the project will be output to.
+            </summary>
+            <value>The directory where the project will be output to.</value>
+        </member>
+        <member name="P:NStub.CSharp.CSharpProjectGenerator.ClassFiles">
+            <summary>
+            Gets or sets the class files which will be included in the project.
+            </summary>
+            <value>The class files which will be included in the project.</value>
+        </member>
+        <member name="P:NStub.CSharp.CSharpProjectGenerator.ReferencedAssemblies">
+            <summary>
+            Gets or sets the assemblies which will be referenced in the project.
+            Any duplicate references found in this list will be removed at generation time.
+            </summary>
+            <value>The assemblies which will be referenced by the project.</value>
+        </member>
+        <member name="T:NStub.CSharp.Exceptions">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NStub.CSharp.Exceptions.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NStub.CSharp.Exceptions.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:NStub.CSharp.Exceptions.DirectoryCannotBeFound">
+            <summary>
+              Looks up a localized string similar to directory cannot be found.
+            </summary>
+        </member>
+        <member name="P:NStub.CSharp.Exceptions.ParameterCannotBeNull">
+            <summary>
+              Looks up a localized string similar to parameter cannot be null.
+            </summary>
+        </member>
+        <member name="P:NStub.CSharp.Exceptions.StringCannotBeEmpty">
+            <summary>
+              Looks up a localized string similar to string cannot be empty.
+            </summary>
+        </member>
+    </members>
+</doc>

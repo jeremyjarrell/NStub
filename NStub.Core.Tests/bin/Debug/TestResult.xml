@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\dev\Personal\CodePlex\NStub\NStub.Core.Tests\bin\Debug\NStub.Core.Tests.dll" total="7" failures="0" not-run="0" date="2007-04-12" time="11:36:21">
+  <environment nunit-version="2.2.9.0" clr-version="2.0.50727.42" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="C:\dev\Personal\CodePlex\NStub\NStub.Core.Tests\bin\Debug" machine-name="JJARRELL" user="jjarrell" user-domain="TYGART" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="C:\dev\Personal\CodePlex\NStub\NStub.Core.Tests\bin\Debug\NStub.Core.Tests.dll" success="True" time="0.405" asserts="0">
+    <results>
+      <test-suite name="C:\dev\Personal\CodePlex\NStub\NStub.Core.Tests\bin\Debug\NStub.Core.Tests.dll" success="True" time="0.405" asserts="0">
+        <results>
+          <test-suite name="NStub" success="True" time="0.405" asserts="0">
+            <results>
+              <test-suite name="Core" success="True" time="0.405" asserts="0">
+                <results>
+                  <test-suite name="Tests" success="True" time="0.405" asserts="0">
+                    <results>
+                      <test-suite name="NStubCoreTest" success="True" time="0.390" asserts="0">
+                        <results>
+                          <test-case name="NStub.Core.Tests.NStubCoreTest.CodeGeneratorTest" executed="True" success="True" time="0.358" asserts="1" />
+                          <test-case name="NStub.Core.Tests.NStubCoreTest.CodeNamespaceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="NStub.Core.Tests.NStubCoreTest.GenerateCodeTest" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="NStub.Core.Tests.NStubCoreTest.OutputDirectoryTest" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="UtilityTest" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="NStub.Core.Tests.UtilityTest.GetNamespaceFromFullyQualifiedTypeNameTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="NStub.Core.Tests.UtilityTest.GetUnqualifiedTypeNameTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="NStub.Core.Tests.UtilityTest.ScrubPathOfIllegalCharactersTest" executed="True" success="True" time="0.016" asserts="9" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

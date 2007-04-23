@@ -1,0 +1,15 @@
+bin\Debug\NStub.CSharp.Tests.dll
+bin\Debug\NStub.CSharp.Tests.pdb
+bin\Debug\NStub.CSharp.dll
+bin\Debug\nunit.framework.dll
+bin\Debug\NStub.Core.dll
+bin\Debug\NStub.Core.pdb
+bin\Debug\NStub.CSharp.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NStub.CSharp.Tests.dll
+obj\Debug\NStub.CSharp.Tests.pdb
+bin\Debug\NStub.Core.xml
+bin\Debug\NStub.CSharp.xml
+bin\Debug\Rhino.Mocks.dll
+bin\Debug\Rhino.Mocks.xml
+bin\Debug\NStub.CSharp.Tests.XML

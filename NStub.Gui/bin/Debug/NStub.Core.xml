@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NStub.Core</name>
+    </assembly>
+    <members>
+        <member name="T:NStub.Core.Exceptions">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.Exceptions.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.Exceptions.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.Exceptions.DirectoryCannotBeFound">
+            <summary>
+              Looks up a localized string similar to directory cannot be found.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.Exceptions.ParameterCannotBeNull">
+            <summary>
+              Looks up a localized string similar to parameter cannot be null.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.Exceptions.StringCannotBeEmpty">
+            <summary>
+              Looks up a localized string similar to string cannot be empty.
+            </summary>
+        </member>
+        <member name="T:NStub.Core.NStubCore">
+            <summary>
+            The NStub type represents the container class which manages the 
+            generation of testing code for the supplied 
+            <see cref="T:System.CodeDom.CodeNamespace"/> using the
+            supplied implementation of 
+            <see cref="T:NStub.Core.ICodeGenerator"/>.
+            The resulting files are output to the given directory.
+            </summary>
+        </member>
+        <member name="M:NStub.Core.NStubCore.#ctor(System.CodeDom.CodeNamespace,System.String,NStub.Core.ICodeGenerator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NStub.Core.NStubCore"/> class which
+            will generate the given <see cref="T:System.CodeDom.CodeNamespace"/>
+            to the given output directory using the given implementation 
+            of <see cref="T:NStub.Core.ICodeGenerator"/>.
+            </summary>
+            <param name="codeNamespace">The code namespace which contains the types
+            to be generated.</param>
+            <param name="outputDirectory">The directory where the resulting 
+            files will be output to.</param>
+            <param name="codeGenerator">The code generator which will perform the
+            generation.</param>
+            <exception cref="T:System.ArgumentNullException">codeNamespace, 
+            outputDirectory, or codeGenerator is null.</exception>
+            <exception cref="T:System.ArgumentException">outputDirectory is an
+            empty string.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">outputDirectory
+            is not a valid directory.</exception>
+        </member>
+        <member name="M:NStub.Core.NStubCore.GenerateCode">
+            <summary>
+            Generates the code represented by the current 
+            <see cref="T:System.CodeDom.CodeNamespace"/> using 
+            the current <see cref="T:NStub.Core.ICodeGenerator"/>.
+            </summary>
+        </member>
+        <member name="M:NStub.Core.NStubCore.InitCodeGenerator(NStub.Core.ICodeGenerator)">
+            <summary>
+            Initializes the given <see cref="T:NStub.Core.ICodeGenerator">codeGenerator</see>.
+            </summary>
+            <param name="codeGenerator">The 
+            <see cref="T:NStub.Core.ICodeGenerator">codeGenerator</see> to be
+            initialized.</param>
+        </member>
+        <member name="P:NStub.Core.NStubCore.CodeNamespace">
+            <summary>
+            Gets or sets the <see cref="T:System.CodeDom.CodeNamespace"/>
+            which contains the types to be generated.
+            </summary>
+            <value>The <see cref="T:System.CodeDom.CodeNamespace"/> which 
+            contains the types to be generated.</value>
+        </member>
+        <member name="P:NStub.Core.NStubCore.CodeGenerator">
+            <summary>
+            Gets or sets the <see cref="T:NStub.Core.ICodeGenerator"/>
+            which will perform the actual generation of code.
+            </summary>
+            <value>The <see cref="T:NStub.Core.ICodeGenerator"/> which will 
+            perform the actual generation of code.</value>
+        </member>
+        <member name="P:NStub.Core.NStubCore.OutputDirectory">
+            <summary>
+            Gets or sets the output directory where the resulting class files
+            will be placed.
+            </summary>
+            <value>The output directory where the resulting class files will
+            be placed.</value>
+        </member>
+        <member name="T:NStub.Core.ICodeGenerator">
+            <summary>
+            ICodeGenerator represents a class that is capable of generating the set
+            of types represented by <see cref="T:System.CodeDom.CodeNamespace"/>
+            into a set of individual class files which will be output to the OutputDirectory.
+            </summary>
+        </member>
+        <member name="M:NStub.Core.ICodeGenerator.GenerateCode">
+            <summary>
+            The implementation of this method will actually perform the generation
+            of the class files which represent the types supplied by the 
+            <see cref="T:System.CodeDom.CodeNamespace"/>.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.ICodeGenerator.OutputDirectory">
+            <summary>
+            Gets or sets the output directory where the class files will be
+            output to.
+            </summary>
+            <value>The output directory where the class files will be output
+            to.</value>
+        </member>
+        <member name="P:NStub.Core.ICodeGenerator.CodeNamespace">
+            <summary>
+            Gets or sets the <see cref="T:System.CodeDom.CodeNamespace"/>
+            which represents the set of types to be generated.
+            </summary>
+            <value>The <see cref="P:NStub.Core.ICodeGenerator.CodeNamespace"/> which represents the set 
+            of types of be generated.</value>
+        </member>
+        <member name="T:NStub.Core.Utility">
+            <summary>
+            This class provides basic utility methods to assist in the code generation
+            perfomed by NStub.
+            </summary>
+        </member>
+        <member name="M:NStub.Core.Utility.GetUnqualifiedTypeName(System.String)">
+            <summary>
+            Gets the unqualified name of the given type.  For example, if 
+            <c>System.IO.Stream</c> is provided, <c>Stream</c> is returned.
+            </summary>
+            <param name="name">The fully qualified name.</param>
+            <returns>The unqualified name.</returns>
+            <exception cref="T:System.ArgumentNullException">name is null.</exception>
+            <exception cref="T:System.ArgumentException">name is an empty string.</exception>
+        </member>
+        <member name="M:NStub.Core.Utility.GetNamespaceFromFullyQualifiedTypeName(System.String)">
+            <summary>
+            Gets the name of the namespace from fully the given qualified type.
+            For example, if <c>System.IO.Stream</c> is provided, <c>System.IO</c>
+            is returned.
+            </summary>
+            <param name="name">The fully qualified name.</param>
+            <returns>The namespace to which the fully qualified name belongs.</returns>
+            <exception cref="T:System.ArgumentNullException">name is null.</exception>
+            <exception cref="T:System.ArgumentException">name is an empty string.</exception>
+        </member>
+        <member name="M:NStub.Core.Utility.ScrubPathOfIllegalCharacters(System.String)">
+            <summary>
+            Removes any illegal characters from the given path and replaces them
+            with <c>_</c>.
+            </summary>
+            <param name="path">The path containing illegal characters.</param>
+            <returns>A clean version of the path will all illegal characters replaced
+            with underscores.</returns>
+            <exception cref="T:System.ArgumentNullException">path is null.</exception>
+            <exception cref="T:System.ArgumentException">path is an empty string.</exception>
+        </member>
+        <member name="T:NStub.Core.IProjectGenerator">
+            <summary>
+            The IProjectGenerator interface abstracts all information and functionality
+            necessary to successfully generate a proper project file.
+            </summary>
+        </member>
+        <member name="M:NStub.Core.IProjectGenerator.GenerateProjectFile">
+            <summary>
+            Generates the project file.  This method is responsible for actually
+            generating the XML which will represent the project as well including
+            all necessary resources and references.
+            </summary>
+        </member>
+        <member name="P:NStub.Core.IProjectGenerator.ProjectName">
+            <summary>
+            Gets or sets the name of the project.
+            </summary>
+            <value>The name of the project.</value>
+        </member>
+        <member name="P:NStub.Core.IProjectGenerator.OutputDirectory">
+            <summary>
+            Gets or sets the output directory where the project will be
+            output to.
+            </summary>
+            <value>The output directory where the project will be output to.</value>
+        </member>
+        <member name="P:NStub.Core.IProjectGenerator.ClassFiles">
+            <summary>
+            Gets or sets the class files which will be included in the project.
+            </summary>
+            <value>The class files which will be included in the project.</value>
+        </member>
+        <member name="P:NStub.Core.IProjectGenerator.ReferencedAssemblies">
+            <summary>
+            Gets or sets the assemblies which will be referenced in the project.
+            Any duplicate references found in this list will be removed at generation time.
+            </summary>
+            <value>The assemblies which will be referenced by the project.</value>
+        </member>
+    </members>
+</doc>

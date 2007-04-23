@@ -1,0 +1,11 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\NStub.Core.Tests.dll
+bin\Debug\NStub.Core.Tests.pdb
+bin\Debug\NStub.Core.dll
+bin\Debug\nunit.framework.dll
+bin\Debug\Rhino.Mocks.dll
+bin\Debug\NStub.Core.pdb
+bin\Debug\Rhino.Mocks.xml
+obj\Debug\NStub.Core.Tests.dll
+obj\Debug\NStub.Core.Tests.pdb
+bin\Debug\NStub.Core.xml

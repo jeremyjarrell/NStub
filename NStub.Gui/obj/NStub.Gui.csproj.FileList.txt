@@ -1,0 +1,16 @@
+.\bin\Debug\NStub.Gui.exe
+.\bin\Debug\NStub.Gui.pdb
+.\bin\Debug\NStub.Core.dll
+.\bin\Debug\NStub.CSharp.dll
+.\bin\Debug\NStub.Core.pdb
+.\bin\Debug\NStub.CSharp.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NStub.Gui.MainForm.resources
+obj\Debug\NStub.Gui.Properties.Resources.resources
+obj\Debug\NStub.Gui.csproj.GenerateResource.Cache
+obj\Debug\NStub.Gui.exe
+obj\Debug\NStub.Gui.pdb
+.\bin\Debug\NStub.Core.xml
+.\bin\Debug\NStub.CSharp.xml
+.\bin\Debug\nunit.framework.dll
+.\bin\Debug\nunit.framework.xml

@@ -1,0 +1,947 @@
+[Sandcastle Help File Builder GUI, version 1.4.0.1]
+Finding tools...
+Found Sandcastle in 'C:\Program Files\Sandcastle\'
+Found HTML 1.x help compiler in 'C:\Program Files\HTML Help Workshop\'
+Validating documentation assembly information...
+-------------------------------
+Creating Sandcastle configuration file...
+    Last step completed in 00:00:00.0781
+-------------------------------
+Generating shared content files (en-US)...
+    Last step completed in 00:00:00.1094
+-------------------------------
+Generating reflection information...
+[C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\GenerateRefInfo.bat]
+MrefBuilder (v2.2.63000.2)
+Copyright c Microsoft 2006
+Info: Loaded 3 assemblies for reflection and 0 dependency assemblies.
+Info: Wrote information on 5 namespaces, 11 types, and 75 members
+    Last step completed in 00:00:04.0163
+-------------------------------
+Removing duplicate topics from reflection information file
+Deleting duplicate topic 'T:<Module>'
+Deleting duplicate topic 'T:<Module>'
+    2 duplicate topics removed
+Cleaning up namespace elements
+Deleting duplicate namespace entry 'T:<Module>'
+Deleting duplicate namespace entry 'T:<Module>'
+    2 duplicates removed from N:
+    Last step completed in 00:00:00.0469
+-------------------------------
+Generating namespace summary information...
+    Warning: Missing namespace summary documentation for N:
+    Warning: Missing namespace summary documentation for N:NStub.Core
+    Warning: Missing namespace summary documentation for N:NStub.CSharp
+    Warning: Missing namespace summary documentation for N:NStub.Gui
+    Warning: Missing namespace summary documentation for N:NStub.Gui.Properties
+    Last step completed in 00:00:00.0781
+-------------------------------
+Applying visibility properties to reflection information file
+    0 event backer fields noted for removal
+    0 'protected internal' members changed to 'protected'
+    Last step completed in 00:00:00.2032
+-------------------------------
+Transforming reflection output...
+[C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\TransformManifest.bat]
+XslTransform (v2.2.63000.2)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ApplyVSDocModel.xsl'.
+Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl'.
+XslTransform (v2.2.63000.2)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl'.
+    Last step completed in 00:00:02.6411
+-------------------------------
+Copying standard help content...
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\alert_caution.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_note.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\alert_note.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\alert_security.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\alert_security.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\Caution.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\Caution.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\CFW.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\CFW.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collall.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\collall.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\collapse_all.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycode.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\copycode.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\copycodeHighlight.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\drpdown.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\drpdown_orange.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\exp.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\exp.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\expall.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\expall.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\expand_all.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\expand_all.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\footer.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\footer.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\LastChild.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\LastChild.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privclass.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privdelicate.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privdelicate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privenum.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privevent.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privfield.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privinterface.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privmethod.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privproperty.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\privstructure.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\privstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protclass.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protdeligate.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protdeligate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protenum.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protevent.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protfield.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protinterface.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protmethod.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protoperator.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protoperator.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protproperty.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\protstructure.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\protstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubclass.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubclass.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubdelegate.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubenum.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubenum.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubevent.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubevent.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubfield.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubfield.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubinterface.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubmethod.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\puboperator.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\puboperator.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubproperty.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\pubstructure.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\security.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\security.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\icons\static.gif -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\icons\static.gif
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\scripts\Dropdown.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\scripts\EventUtilities.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\scripts\script_manifold.js
+C:\Program Files\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\scripts\SplitScreen.js
+C:\Program Files\Sandcastle\Presentation\vs2005\styles\presentation.css -> C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\styles\presentation.css
+    Last step completed in 00:00:00.7970
+
+Building help topics...
+[C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\BuildHelpTopics.bat]
+BuildAssembler (v2.2.63000.2)
+Copyright c Microsoft 2006
+Info: CopyFromFileComponent: Instantiating component.
+Info: CopyFromFileComponent: Loading data file 'C:\Program Files\Sandcastle\Presentation\vs2005\transforms\skeleton.xml'.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Searching for files that match 'reflection.xml'.
+Info: CopyFromIndexComponent: Searching for files that match 'C:\Program Files\Sandcastle\Data\Cpref_reflection\*.xml'.
+Info: CopyFromIndexComponent: Indexed 149360 elements in 105 files.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: ForEachComponent: Instantiating component.
+Info: ForEachComponent: Loading subcomponents.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: ForEachComponent: Loaded 1 subcomponents.
+Info: ForEachComponent: Instantiating component.
+Info: ForEachComponent: Loading subcomponents.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: ForEachComponent: Loaded 1 subcomponents.
+Info: IfThenComponent: Instantiating component.
+Info: SyntaxComponent: Instantiating component.
+Info: SyntaxComponent: Loaded 3 syntax generators.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Searching for files that match 'C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\NStub.Gui.xml'.
+Info: CopyFromIndexComponent: Searching for files that match 'C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\NStub.Core.xml'.
+Info: CopyFromIndexComponent: Searching for files that match 'C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\NStub.CSharp.xml'.
+Info: CopyFromIndexComponent: Searching for files that match 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\*.xml'.
+Info: CopyFromIndexComponent: Indexed 75531 elements in 70 files.
+Info: ForEachComponent: Instantiating component.
+Info: ForEachComponent: Loading subcomponents.
+Info: IfThenComponent: Instantiating component.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: ForEachComponent: Loaded 2 subcomponents.
+Info: CopyFromIndexComponent: Instantiating component.
+Info: ShowMissingComponent: Instantiating component.
+Info: ShowMissingComponent: 
+    [Sandcastle Help File Builder Components, version 1.4.0.1]
+    Show Missing Documentation Component. Copyright c 2006-2007, Eric Woodruff, All Rights Reserved
+    http://www.codeplex.com/SHFB
+Info: ShowMissingComponent:   All Show Missing options are disabled.  The component will do nothing.
+Info: VersionInfoComponent: Instantiating component.
+Info: VersionInfoComponent: 
+    [Sandcastle Help File Builder Components, version 1.4.0.1]
+    Version Information Component. Copyright c 2006-2007, Eric Woodruff, All Rights Reserved
+    http://www.codeplex.com/SHFB
+Info: CodeBlockComponent: Instantiating component.
+Info: CodeBlockComponent: 
+    [Sandcastle Help File Builder Components, version 1.4.0.1]
+    Code Block Component. Copyright c 2006-2007, Eric Woodruff, All Rights Reserved.
+    Portions copyright (c) 2003, Jonathan de Halleux, All rights reserved.
+    http://www.codeplex.com/SHFB
+Info: TransformComponent: Instantiating component.
+Info: PostTransformComponent: Instantiating component.
+Info: PostTransformComponent: 
+    [Sandcastle Help File Builder Components, version 1.4.0.1]
+    Post-Transform Component. Copyright c 2006-2007, Eric Woodruff, All Rights Reserved
+    http://www.codeplex.com/SHFB
+Info: SharedContentComponent: Instantiating component.
+Info: SharedContentComponent: Loading shared content file 'shared_content.xml'.
+Info: SharedContentComponent: Loading shared content file 'reference_content.xml'.
+Info: SharedContentComponent: Overriding shared content item 'remarkstitle' with value in file 'reference_content.xml'.
+Info: SharedContentComponent: Overriding shared content item 'namespacenameheader' with value in file 'reference_content.xml'.
+Info: SharedContentComponent: Loading shared content file 'syntax_content.xml'.
+Info: SharedContentComponent: Loaded 382 shared content items.
+Info: ResolveReferenceLinksComponent: Instantiating component.
+Info: ResolveReferenceLinksComponent: Indexed 149360 reference link targets.
+Info: SaveComponent: Instantiating component.
+Info: BuildAssembler: Building topic R:Project
+Info: BuildAssembler: Building topic N:
+Info: BuildAssembler: Building topic T:<Module>
+Info: BuildAssembler: Building topic N:NStub.Core
+Info: BuildAssembler: Building topic T:NStub.Core.ICodeGenerator
+Info: BuildAssembler: Building topic AllMembers.T:NStub.Core.ICodeGenerator
+Info: BuildAssembler: Building topic Methods.T:NStub.Core.ICodeGenerator
+Info: BuildAssembler: Building topic Properties.T:NStub.Core.ICodeGenerator
+Info: BuildAssembler: Building topic P:NStub.Core.ICodeGenerator.CodeNamespace
+Info: ResolveReferenceLinksComponent: Preparing to query MSDN topic URL web service.
+Info: BuildAssembler: Building topic P:NStub.Core.ICodeGenerator.DestinationDirectory
+Info: BuildAssembler: Building topic M:NStub.Core.ICodeGenerator.GenerateCode
+Info: BuildAssembler: Building topic T:NStub.Core.IProjectGenerator
+Info: BuildAssembler: Building topic AllMembers.T:NStub.Core.IProjectGenerator
+Info: BuildAssembler: Building topic Methods.T:NStub.Core.IProjectGenerator
+Info: BuildAssembler: Building topic Properties.T:NStub.Core.IProjectGenerator
+Info: BuildAssembler: Building topic P:NStub.Core.IProjectGenerator.ClassFiles
+Info: BuildAssembler: Building topic P:NStub.Core.IProjectGenerator.DestinationDirectory
+Info: BuildAssembler: Building topic M:NStub.Core.IProjectGenerator.GenerateProjectFile
+Info: BuildAssembler: Building topic P:NStub.Core.IProjectGenerator.ProjectName
+Info: BuildAssembler: Building topic P:NStub.Core.IProjectGenerator.ReferencedAssemblies
+Info: BuildAssembler: Building topic T:NStub.Core.NStubCore
+Info: BuildAssembler: Building topic AllMembers.T:NStub.Core.NStubCore
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Info: BuildAssembler: Building topic Methods.T:NStub.Core.NStubCore
+Info: BuildAssembler: Building topic Properties.T:NStub.Core.NStubCore
+Info: BuildAssembler: Building topic Fields.T:NStub.Core.NStubCore
+Warn: SharedContentComponent: Missing shared content item 'fieldsindexentry'.
+Info: BuildAssembler: Building topic M:NStub.Core.NStubCore.#ctor(System.CodeDom.CodeNamespace,System.String,NStub.Core.ICodeGenerator)
+Info: BuildAssembler: Building topic F:NStub.Core.NStubCore._codeGenerator
+Info: BuildAssembler: Building topic F:NStub.Core.NStubCore._codeNamespace
+Info: BuildAssembler: Building topic F:NStub.Core.NStubCore._destinationDirectory
+Info: BuildAssembler: Building topic P:NStub.Core.NStubCore.CodeGenerator
+Info: BuildAssembler: Building topic P:NStub.Core.NStubCore.CodeNamespace
+Info: BuildAssembler: Building topic M:NStub.Core.NStubCore.GenerateCode
+Info: BuildAssembler: Building topic M:NStub.Core.NStubCore.InitCodeGenerator(NStub.Core.ICodeGenerator)
+Info: BuildAssembler: Building topic P:NStub.Core.NStubCore.OutputDirectory
+Info: BuildAssembler: Building topic T:NStub.Core.Utility
+Info: BuildAssembler: Building topic AllMembers.T:NStub.Core.Utility
+Info: BuildAssembler: Building topic Methods.T:NStub.Core.Utility
+Info: BuildAssembler: Building topic M:NStub.Core.Utility.GetNamespaceFromFullyQualifiedTypeName(System.String)
+Info: BuildAssembler: Building topic M:NStub.Core.Utility.GetUnqualifiedTypeName(System.String)
+Info: BuildAssembler: Building topic M:NStub.Core.Utility.ScrubPathOfIllegalCharacters(System.String)
+Info: BuildAssembler: Building topic N:NStub.CSharp
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Core.CSharpProjectGenerator' is unknown.
+Info: BuildAssembler: Building topic T:NStub.CSharp.CSharpCodeGenerator
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Core.CSharpProjectGenerator' is unknown.
+Info: BuildAssembler: Building topic AllMembers.T:NStub.CSharp.CSharpCodeGenerator
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Core.CSharpProjectGenerator' is unknown.
+Warn: ResolveReferenceLinksComponent: The reference link target 'T:CSharpCodeGenerator' is unknown.
+Info: ResolveReferenceLinksComponent: The title for 'T:CSharpCodeGenerator' needed to be constructed from the reference string.
+Info: BuildAssembler: Building topic Methods.T:NStub.CSharp.CSharpCodeGenerator
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Core.CSharpProjectGenerator' is unknown.
+Info: BuildAssembler: Building topic Properties.T:NStub.CSharp.CSharpCodeGenerator
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Core.CSharpProjectGenerator' is unknown.
+Info: BuildAssembler: Building topic Fields.T:NStub.CSharp.CSharpCodeGenerator
+Warn: SharedContentComponent: Missing shared content item 'fieldsindexentry'.
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Core.CSharpProjectGenerator' is unknown.
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpCodeGenerator.#ctor(System.CodeDom.CodeNamespace,System.String)
+Warn: ResolveReferenceLinksComponent: The reference link target 'T:CSharpCodeGenerator' is unknown.
+Info: ResolveReferenceLinksComponent: The title for 'T:CSharpCodeGenerator' needed to be constructed from the reference string.
+Warn: ResolveReferenceLinksComponent: The reference link target '!:System.DirectoryNotFoundException' is unknown.
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpCodeGenerator._codeNamespace
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpCodeGenerator._destinationDirectory
+Info: BuildAssembler: Building topic P:NStub.CSharp.CSharpCodeGenerator.CodeNamespace
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpCodeGenerator.CreateStubForCodeMemberMethod(System.CodeDom.CodeMemberMethod)
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpCodeGenerator.CreateStubForCodeTypeMember(System.CodeDom.CodeTypeMember)
+Info: BuildAssembler: Building topic P:NStub.CSharp.CSharpCodeGenerator.DestinationDirectory
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpCodeGenerator.GenerateCode
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpCodeGenerator.WriteClassFile(System.String,System.CodeDom.CodeNamespace)
+Info: BuildAssembler: Building topic T:NStub.CSharp.CSharpProjectGenerator
+Info: BuildAssembler: Building topic AllMembers.T:NStub.CSharp.CSharpProjectGenerator
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: ResolveReferenceLinksComponent: The reference link target 'T:CSharpProjectGenerator' is unknown.
+Info: ResolveReferenceLinksComponent: The title for 'T:CSharpProjectGenerator' needed to be constructed from the reference string.
+Info: BuildAssembler: Building topic Methods.T:NStub.CSharp.CSharpProjectGenerator
+Info: BuildAssembler: Building topic Properties.T:NStub.CSharp.CSharpProjectGenerator
+Info: BuildAssembler: Building topic Fields.T:NStub.CSharp.CSharpProjectGenerator
+Warn: SharedContentComponent: Missing shared content item 'fieldsindexentry'.
+Info: BuildAssembler: Building topic Overload:NStub.CSharp.CSharpProjectGenerator.WritePropertyGroupElement
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.#ctor(System.String,System.String)
+Warn: ResolveReferenceLinksComponent: The reference link target 'T:CSharpProjectGenerator' is unknown.
+Info: ResolveReferenceLinksComponent: The title for 'T:CSharpProjectGenerator' needed to be constructed from the reference string.
+Warn: ResolveReferenceLinksComponent: The reference link target '!:System.DirectoryNotFoundException' is unknown.
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpProjectGenerator._classFiles
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpProjectGenerator._destinationDirectory
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpProjectGenerator._projectName
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpProjectGenerator._referencedAssemblies
+Info: BuildAssembler: Building topic F:NStub.CSharp.CSharpProjectGenerator._xmlWriter
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.AddClassFiles
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.AddDefaultTarget
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.AddReferencedAssemblies
+Info: BuildAssembler: Building topic P:NStub.CSharp.CSharpProjectGenerator.ClassFiles
+Info: BuildAssembler: Building topic P:NStub.CSharp.CSharpProjectGenerator.DestinationDirectory
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.GenerateProjectFile
+Info: BuildAssembler: Building topic P:NStub.CSharp.CSharpProjectGenerator.ProjectName
+Info: BuildAssembler: Building topic P:NStub.CSharp.CSharpProjectGenerator.ReferencedAssemblies
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.WriteDebugConfiguration
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.WriteDefaultConfiguration
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.WritePropertyGroupElement
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.WritePropertyGroupElement(System.String,System.String)
+Info: BuildAssembler: Building topic M:NStub.CSharp.CSharpProjectGenerator.WriteReleaseConfiguration
+Info: BuildAssembler: Building topic N:NStub.Gui
+Info: BuildAssembler: Building topic T:NStub.Gui.MainForm
+Info: BuildAssembler: Building topic AllMembers.T:NStub.Gui.MainForm
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: SharedContentComponent: Missing shared content item 'group'.
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Gui.LoadAssembly' is unknown.
+Warn: ResolveReferenceLinksComponent: The reference link target 'T:MainForm' is unknown.
+Info: ResolveReferenceLinksComponent: The title for 'T:MainForm' needed to be constructed from the reference string.
+Info: BuildAssembler: Building topic Methods.T:NStub.Gui.MainForm
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Gui.LoadAssembly' is unknown.
+Info: BuildAssembler: Building topic Properties.T:NStub.Gui.MainForm
+Info: BuildAssembler: Building topic Events.T:NStub.Gui.MainForm
+Info: BuildAssembler: Building topic Fields.T:NStub.Gui.MainForm
+Warn: SharedContentComponent: Missing shared content item 'fieldsindexentry'.
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.#ctor
+Warn: ResolveReferenceLinksComponent: The reference link target 'T:MainForm' is unknown.
+Info: ResolveReferenceLinksComponent: The title for 'T:MainForm' needed to be constructed from the reference string.
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._assemblyGraphTreeView
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._browseInputAssemblyButton
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._browseOutputDirectoryButton
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._goButton
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._inputAssemblyLabel
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._inputAssemblyOpenFileDialog
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._inputAssemblyTextBox
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._objectIconsImageList
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._outputDirectoryLabel
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._outputDirectoryTextBox
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._outputFolderBrowserDialog
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm._referencedAssemblies
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.btnBrowseInputAssembly_Click(System.Object,System.EventArgs)
+Warn: ResolveReferenceLinksComponent: The reference link target '!:NStub.Gui.LoadAssembly' is unknown.
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.btnBrowseOutputDirectory_Click(System.Object,System.EventArgs)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.btnGo_Click(System.Object,System.EventArgs)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.CheckChildren(System.Windows.Forms.TreeNode)
+Info: BuildAssembler: Building topic F:NStub.Gui.MainForm.components
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.CreateMethod(System.String,System.Reflection.MethodInfo)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.CreateNamespace(System.Windows.Forms.TreeNode)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.CreateTreeNode(System.String,System.String)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.Dispose(System.Boolean)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.InitializeComponent
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.LoadAssembly
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.tvAssemblyGraph_AfterCheck(System.Object,System.Windows.Forms.TreeViewEventArgs)
+Info: BuildAssembler: Building topic M:NStub.Gui.MainForm.tvAssemblyGraph_BeforeSelect(System.Object,System.Windows.Forms.TreeViewCancelEventArgs)
+Info: BuildAssembler: Building topic T:NStub.Gui.Program
+Info: BuildAssembler: Building topic AllMembers.T:NStub.Gui.Program
+Info: BuildAssembler: Building topic Methods.T:NStub.Gui.Program
+Info: BuildAssembler: Building topic M:NStub.Gui.Program.Main
+Info: BuildAssembler: Building topic N:NStub.Gui.Properties
+Info: Processed 118 topics
+    Last step completed in 00:02:59.9337
+-------------------------------
+Generating table of content for HTML Help 1.x file...
+[C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Generate1xTOC.bat]
+XslTransform (v2.2.63000.2)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\CreateVSToc.xsl'.
+XslTransform (v2.2.63000.2)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\TocToChmContents.xsl'.
+    Last step completed in 00:00:11.0485
+Updating table of content with additional content items and determining default topic ...
+    Last step completed in 00:00:00.0156
+-------------------------------
+Generating help file index...
+[C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Generate1xIndex.bat]
+XslTransform (v2.2.63000.2)
+Copyright c Microsoft 2005-2006
+Info: Applying XSL transformation 'C:\Program Files\Sandcastle\ProductionTransforms\ReflectionToChmIndex.xsl'.
+    Last step completed in 00:00:00.7501
+-------------------------------
+Generating help project file...
+    Last step completed in 00:00:00.1563
+-------------------------------
+Compiling the help file...
+[C:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Build1xHelpFile.bat]
+Microsoft HTML Help Compiler 4.74.8702
+
+
+
+Compiling c:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\NStub.chm
+
+
+
+
+
+Compile time: 0 minutes, 7 seconds
+
+120	Topics
+
+791	Local links
+
+2,832	Internet links
+
+0	Graphics
+
+
+
+
+
+Created c:\dev\Personal\CodePlex\NStub\Solution Items\Help\Working\Output\NStub.chm, 252,633 bytes
+
+Compression decreased file by 1,616,909 bytes.
+
+    Last step completed in 00:00:09.4233
+Removing intermediate files...
+    Last step completed in 00:00:00.7189
+
+
+Build completed successfully.  Total time: 00:03:30.2977
+
