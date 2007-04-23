@@ -1,7 +1,0 @@
-.\bin\Debug\NStub.Core.dll
-.\bin\Debug\NStub.Core.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\NStub.Core.Exceptions.resources
-obj\Debug\NStub.Core.csproj.GenerateResource.Cache
-obj\Debug\NStub.Core.dll
-obj\Debug\NStub.Core.pdb
