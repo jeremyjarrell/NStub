@@ -43,7 +43,7 @@ namespace NStub.Gui
 		/// <summary>
 		/// Handles the Click event of the btnBrowseInputAssembly control.
 		/// Allows the user to select the assembly they wish to generate the test cases
-		/// for.  Calls the <see cref="NStub.Gui.LoadAssembly">LoadAssembly</see>method 
+		/// for.  Calls the <see cref="LoadAssembly"/> method 
 		/// to query the assembly for its contained types.
 		/// </summary>
 		/// <param name="sender">The source of the event.</param>

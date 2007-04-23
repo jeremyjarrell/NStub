@@ -50,6 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Dependencies", "Ex
 	EndProjectSection
 	ProjectSection(SolutionItems) = preProject
 		External Dependencies\nunit.framework.dll = External Dependencies\nunit.framework.dll
+		External Dependencies\nunit.framework.xml = External Dependencies\nunit.framework.xml
 		External Dependencies\Rhino.Mocks.dll = External Dependencies\Rhino.Mocks.dll
 		External Dependencies\Rhino.Mocks.xml = External Dependencies\Rhino.Mocks.xml
 	EndProjectSection
