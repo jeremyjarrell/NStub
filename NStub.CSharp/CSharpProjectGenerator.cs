@@ -81,6 +81,10 @@ namespace NStub.CSharp
 			// Set our collection member variables
 			_classFiles = new List<string>();
 			_referencedAssemblies = new List<AssemblyName>();
+
+			// We know that we'll need a reference to the NUnit framework, so
+			// let's go ahead and add it
+			_referencedAssemblies.Add(new AssemblyName("NUnit.Framework"));
 		}
 
 		#endregion Constructor (Public)

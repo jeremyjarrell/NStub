@@ -1,16 +1,11 @@
 using System;
 using System.CodeDom;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
-using Microsoft.CSharp;
 using NStub.Core;
+using NStub.CSharp;
 
 namespace NStub.Gui
 {
@@ -20,16 +15,16 @@ namespace NStub.Gui
 	public partial class MainForm : Form
 	{
 		#region Member Variables (Private)
-		
-		private IList<AssemblyName> _referencedAssemblies = 
+
+		private IList<AssemblyName> _referencedAssemblies =
 			new List<AssemblyName>();
-		
+
 		#endregion Member Variables (Private)
 
 		#region Constructor (Public)
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="T:MainForm"/> class.
+		/// Initializes a new instance of the <see cref="MainForm"/> class.
 		/// </summary>
 		public MainForm()
 		{
@@ -112,15 +107,15 @@ namespace NStub.Gui
 			for (int h = 0; h < _assemblyGraphTreeView.Nodes.Count; h++)
 			{
 				string outputDirectory = _outputDirectoryTextBox.Text +
-					Path.DirectorySeparatorChar +
-					Path.GetFileNameWithoutExtension(_assemblyGraphTreeView.Nodes[h].Text) + "Test";
+				                         Path.DirectorySeparatorChar +
+				                         Path.GetFileNameWithoutExtension(_assemblyGraphTreeView.Nodes[h].Text) + "Test";
 				Directory.CreateDirectory(outputDirectory);
 
 				// Create our project generator
-				NStub.CSharp.CSharpProjectGenerator cSharpProjectGenerator =
-					new NStub.CSharp.CSharpProjectGenerator(
-					Path.GetFileNameWithoutExtension(_inputAssemblyTextBox.Text) + "Test",
-					outputDirectory);
+				CSharpProjectGenerator cSharpProjectGenerator =
+					new CSharpProjectGenerator(
+						Path.GetFileNameWithoutExtension(_inputAssemblyTextBox.Text) + "Test",
+						outputDirectory);
 
 				// Add our referenced assemblies to the project generator so we
 				// can build the resulting project
@@ -146,7 +141,7 @@ namespace NStub.Gui
 							// need to break this up more.
 							codeNamespace.Name =
 								Utility.GetNamespaceFromFullyQualifiedTypeName(
-								_assemblyGraphTreeView.Nodes[h].Nodes[i].Nodes[j].Text);
+									_assemblyGraphTreeView.Nodes[h].Nodes[i].Nodes[j].Text);
 
 							if (_assemblyGraphTreeView.Nodes[h].Nodes[i].Nodes[j].Checked)
 							{
@@ -167,7 +162,7 @@ namespace NStub.Gui
 											CodeMemberMethod codeMemberMethod =
 												CreateMethod(
 													_assemblyGraphTreeView.Nodes[h].Nodes[i].Nodes[j].Nodes[k].Text,
-													(MethodInfo)_assemblyGraphTreeView.Nodes[h].Nodes[i].Nodes[j].Nodes[k].Tag);
+													(MethodInfo) _assemblyGraphTreeView.Nodes[h].Nodes[i].Nodes[j].Nodes[k].Tag);
 											testClass.Members.Add(codeMemberMethod);
 										}
 									}
@@ -179,9 +174,9 @@ namespace NStub.Gui
 							}
 						}
 						// Now write the test file
-						NStub.Core.NStubCore nStub =
-							new NStub.Core.NStubCore(codeNamespace, outputDirectory,
-							new NStub.CSharp.CSharpCodeGenerator(codeNamespace, outputDirectory));
+						NStubCore nStub =
+							new NStubCore(codeNamespace, outputDirectory,
+							              new CSharpCodeGenerator(codeNamespace, outputDirectory));
 						nStub.GenerateCode();
 
 						// Add all of our classes to the project
@@ -228,7 +223,7 @@ namespace NStub.Gui
 		/// <param name="text">The text of the TreeNode.</param>
 		/// <param name="imageKey">The key corresponding to the TreeNode's image.</param>
 		/// <returns></returns>
-		TreeNode CreateTreeNode(string text, string imageKey)
+		private TreeNode CreateTreeNode(string text, string imageKey)
 		{
 			TreeNode treeNode = new TreeNode(text);
 			treeNode.Checked = true;
@@ -250,9 +245,9 @@ namespace NStub.Gui
 				// Load our input assembly and create its node in the tree
 				Assembly inputAssembly =
 					Assembly.LoadFile(_inputAssemblyOpenFileDialog.FileNames[theAssembly]);
-				TreeNode assemblyTreeNode = 
+				TreeNode assemblyTreeNode =
 					CreateTreeNode(_inputAssemblyOpenFileDialog.FileNames[theAssembly],
-					"imgAssembly");
+					               "imgAssembly");
 				_assemblyGraphTreeView.Nodes.Add(assemblyTreeNode);
 
 				// Add our referenced assemblies to the project generator so we
@@ -260,7 +255,7 @@ namespace NStub.Gui
 				foreach (AssemblyName assemblyName in inputAssembly.GetReferencedAssemblies())
 				{
 					_referencedAssemblies.Add(assemblyName);
-				}				
+				}
 
 				// Retrieve the modules from the assembly.  Most assemblies only have one
 				// module, but it is possible for assemblies to possess multiple modules
@@ -270,9 +265,9 @@ namespace NStub.Gui
 				for (int theModule = 0; theModule < modules.Length; theModule++)
 				{
 					// Add a node to the tree to represent the module
-					TreeNode moduleTreeNode = 
+					TreeNode moduleTreeNode =
 						CreateTreeNode(modules[theModule].Name, "imgModule");
-					_assemblyGraphTreeView.Nodes[theAssembly].Nodes.Add(moduleTreeNode);						
+					_assemblyGraphTreeView.Nodes[theAssembly].Nodes.Add(moduleTreeNode);
 					Type[] containedTypes = modules[theModule].GetTypes();
 
 					// Add the classes in each type
@@ -325,11 +320,11 @@ namespace NStub.Gui
 		}
 
 		private CodeMemberMethod CreateMethod(string methodName, MethodInfo methodInfo)
-		{	
+		{
 			// Create the method
 			CodeMemberMethod codeMemberMethod = new CodeMemberMethod();
 
-			codeMemberMethod.Attributes = (MemberAttributes)methodInfo.Attributes;
+			codeMemberMethod.Attributes = (MemberAttributes) methodInfo.Attributes;
 			codeMemberMethod.Name = methodName;
 
 			// Set the return type for the method
@@ -341,7 +336,7 @@ namespace NStub.Gui
 			{
 				codeMemberMethod.Parameters.Add(
 					new CodeParameterDeclarationExpression(parameter.ParameterType,
-					parameter.Name));
+					                                       parameter.Name));
 			}
 
 			return codeMemberMethod;

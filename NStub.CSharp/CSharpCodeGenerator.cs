@@ -38,7 +38,7 @@ namespace NStub.CSharp
 		/// empty string.</exception>
 		/// <exception cref="DirectoryNotFoundException">outputDirectory
 		/// cannot be found.</exception>
-		public CSharpCodeGenerator(CodeNamespace codeNamespace, 
+		public CSharpCodeGenerator(CodeNamespace codeNamespace,
 			string outputDirectory)
 		{
 			#region Validation
@@ -109,7 +109,7 @@ namespace NStub.CSharp
 				_codeNamespace = value;
 			}
 		}
-		
+
 		#endregion Properties (Public)
 
 		#region Methods (Public)
@@ -125,11 +125,15 @@ namespace NStub.CSharp
 			foreach (CodeTypeDeclaration codeTypeDeclaration in _codeNamespace.Types)
 			{
 				// Create a namespace for the Type in order to put it in scope
-				CodeNamespace codeNamespace = 
+				CodeNamespace codeNamespace =
 					new CodeNamespace((_codeNamespace.Name));
 
+				// Clean the type name
+				codeTypeDeclaration.Name =
+					Utility.ScrubPathOfIllegalCharacters(codeTypeDeclaration.Name);
+
 				// Create our test type
-				codeTypeDeclaration.Name = 
+				codeTypeDeclaration.Name =
 					Utility.GetUnqualifiedTypeName(codeTypeDeclaration.Name) + "Test";
 				codeTypeDeclaration.IsPartial = true;
 
@@ -142,15 +146,14 @@ namespace NStub.CSharp
 				foreach (CodeTypeMember typeMember in codeTypeDeclaration.Members)
 				{
 					if (typeMember is CodeMemberMethod)
-					{					
-						CreateStubForCodeMemberMethod(typeMember as CodeMemberMethod);
-					}
-					else
 					{
-						CreateStubForCodeTypeMember(typeMember);
+						CreateStubForCodeMemberMethod(typeMember as CodeMemberMethod);
 					}
 				}
 				codeNamespace.Types.Add(codeTypeDeclaration);
+
+				RemoveDuplicatedMembers(codeTypeDeclaration);
+
 				WriteClassFile(codeTypeDeclaration.Name, codeNamespace);
 			}
 		}
@@ -160,13 +163,34 @@ namespace NStub.CSharp
 		#region Helper Methods (Private)
 
 		/// <summary>
-		/// Creates the stub for code type member.  In this case we only append
-		/// the user's selected test name to the method.
+		/// Since types can contain multiple overloads of the same method, once
+		/// we remove the parameters from every method our type may have the 
+		/// many duplicates of the same method.  This method removes those
+		/// duplicates.
 		/// </summary>
-		/// <param name="codeTypeMember">The code type member to be generated.</param>
-		private static void CreateStubForCodeTypeMember(CodeTypeMember codeTypeMember)
+		/// <param name="codeTypeDeclaration">The <see cref="CodeTypeDeclaration"/>
+		/// from which to remove the duplicates.</param>
+		private static void RemoveDuplicatedMembers(CodeTypeDeclaration codeTypeDeclaration)
 		{
-			codeTypeMember.Name = codeTypeMember.Name + "Test";
+			for (int i = 0; i < codeTypeDeclaration.Members.Count; ++i)
+			{
+				int occurrences = 0;
+				for (int j = 0; j < codeTypeDeclaration.Members.Count; ++j)
+				{
+					// Compare each CodeTypeMember to all other CodeTypeMembers
+					// in its type.  If more than one match is found (the 
+					// codeTypeMember matching itself) then we remove that match.
+					if (codeTypeDeclaration.Members[i].Name.Equals(
+						codeTypeDeclaration.Members[j].Name))
+					{
+						occurrences++;
+						if (occurrences > 1)
+						{
+							codeTypeDeclaration.Members.Remove(codeTypeDeclaration.Members[j]);
+						}
+					}
+				}
+			}
 		}
 
 		/// <summary>
@@ -176,16 +200,23 @@ namespace NStub.CSharp
 		/// <param name="codeMemberMethod">The code member method.</param>
 		private static void CreateStubForCodeMemberMethod(CodeMemberMethod codeMemberMethod)
 		{
-			CreateStubForCodeTypeMember(codeMemberMethod);
+			// Clean the member name and append 'Test' to the end of it
+			codeMemberMethod.Name = Utility.ScrubPathOfIllegalCharacters(codeMemberMethod.Name);
+			codeMemberMethod.Name = codeMemberMethod.Name + "Test";
+
+			// Standard test methods accept no parameters and return void.
+			codeMemberMethod.ReturnType = new CodeTypeReference(typeof(void));
+			codeMemberMethod.Parameters.Clear();
+
 			codeMemberMethod.CustomAttributes.Add(
 				new CodeAttributeDeclaration(
 					new CodeTypeReference(typeof(TestAttribute))));
 			codeMemberMethod.Statements.Add(
-				new CodeCommentStatement("TODO: Implement unit test for " + 
+				new CodeCommentStatement("TODO: Implement unit test for " +
 				codeMemberMethod.Name));
-			codeMemberMethod.Statements.Add(
-				new CodeThrowExceptionStatement(
-					new CodeTypeReferenceExpression(typeof(NotImplementedException))));
+			//codeMemberMethod.Statements.Add(
+			//    new CodeThrowExceptionStatement(
+			//        new CodeTypeReferenceExpression(typeof(NotImplementedException))));
 		}
 
 		/// <summary>
@@ -205,7 +236,7 @@ namespace NStub.CSharp
 				new IndentedTextWriter(new StreamWriter(sourceFile, false), "  ");
 			CodeGeneratorOptions codeGenerationOptions = new CodeGeneratorOptions();
 			codeGenerationOptions.BracingStyle = "C";
-			cSharpCodeProvider.GenerateCodeFromNamespace(codeNamespace, indentedTextWriter, 
+			cSharpCodeProvider.GenerateCodeFromNamespace(codeNamespace, indentedTextWriter,
 				codeGenerationOptions);
 			indentedTextWriter.Flush();
 			indentedTextWriter.Close();
