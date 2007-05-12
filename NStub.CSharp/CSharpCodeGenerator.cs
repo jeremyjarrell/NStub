@@ -147,7 +147,11 @@ namespace NStub.CSharp
 				{
 					if (typeMember is CodeMemberMethod)
 					{
-						CreateStubForCodeMemberMethod(typeMember as CodeMemberMethod);
+						// We don't generate default constructors
+						if (!(typeMember is CodeConstructor))
+						{
+							CreateStubForCodeMemberMethod(typeMember as CodeMemberMethod);
+						}
 					}
 				}
 				codeNamespace.Types.Add(codeTypeDeclaration);
@@ -209,14 +213,14 @@ namespace NStub.CSharp
 			codeMemberMethod.Parameters.Clear();
 
 			codeMemberMethod.CustomAttributes.Add(
-				new CodeAttributeDeclaration(
-					new CodeTypeReference(typeof(TestAttribute))));
+					new CodeAttributeDeclaration(
+						new CodeTypeReference(typeof(TestAttribute))));
+			codeMemberMethod.CustomAttributes.Add(
+					new CodeAttributeDeclaration(
+					new CodeTypeReference(typeof(IgnoreAttribute))));
 			codeMemberMethod.Statements.Add(
 				new CodeCommentStatement("TODO: Implement unit test for " +
-				codeMemberMethod.Name));
-			//codeMemberMethod.Statements.Add(
-			//    new CodeThrowExceptionStatement(
-			//        new CodeTypeReferenceExpression(typeof(NotImplementedException))));
+										 codeMemberMethod.Name));
 		}
 
 		/// <summary>
