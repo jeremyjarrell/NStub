@@ -8,8 +8,8 @@ That sounds great...except for... NStub is fully extensible, allowing you to cre
 
 There a few driving principles behind NStub, we consider these our 'bill of rights' so to speak and hold them in highest regarding when making all design and development decisions. No matter what functionality is added to NStub, you can always rest assured that none of these inalienable rights will ever be violated.
 
-*All projects will compile immediately after generation
-*NStub will not 'lock you into' any particular testing framework or language
-*There will be no aspect of NStub that you can't extend, alter, or modify to suit your own purposes
+* All projects will compile immediately after generation
+* NStub will not 'lock you into' any particular testing framework or language
+* There will be no aspect of NStub that you can't extend, alter, or modify to suit your own purposes
 
 This sounds like something I could use! Great, then give it a shot! Just download our current stable build and let us know what you think. Have a suggestion or want to help out? Even better! Just drop us a line and we'll be happy to listen to what you have to say!
